@@ -569,19 +569,14 @@ Fig 17 : Relation between TraitVal and Trait.
 
 Likewise, create relations between one particular TraitVal with all its
 value. In Fig15 TraitVal (15.9) has to be linked with its attributes :
-
-  -----------------------------------------------------------------------
-  Trait                               **greatest length of skull**
-  ----------------------------------- -----------------------------------
-  Sex                                 **females**
-
-  Count                               **six**
-
-  Stat                                **means**
-
-  Unit                                **mm**
-
-  Ref                                 **Peters et al. (2002)**
+  Label                              | Term
+  -----------------------------------|-----------------------------------
+  Trait                              | **greatest length of skull**
+  Sex                                | **females**                    
+  Count                              | **six**
+  Stat                               | **means**
+  Unit                               | **mm**
+  Ref                                | **Peters et al. (2002)**
   -----------------------------------------------------------------------
 
 Each Traitval should be linked with every bit of information that makes
