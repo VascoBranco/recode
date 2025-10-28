@@ -344,18 +344,15 @@ Example:
 
 Fig 1: Select Text
 
-![](media/image1.jpeg){width="5.758333333333334in"
-height="2.8333333333333335in"}
+![Fig. 1](img/guidelines_1.jpg)
 
-> Fig 2: Select Text
+Fig 2: Select Text
 
-![](media/image2.jpeg){width="5.7340277777777775in"
-height="3.3541666666666665in"}
+![Fig. 2](img/guidelines_2.jpg)
 
 Fig 3: Tag the Entity
 
-![](media/image3.jpeg){width="5.8180555555555555in"
-height="3.2708333333333335in"}
+![Fig. 3](img/guidelines_3.jpg)
 
 **NOTE:**
 
@@ -380,8 +377,7 @@ this:
 
 Fig4: Annotated in Inception
 
-![](media/image4.jpeg){width="5.833333333333333in"
-height="3.2291666666666665in"}
+![Fig. 4](img/guidelines_4.jpg)
 
 ## 2.4 EXAMPLES & CAUTIONS FOR ANNOTATORS
 
@@ -406,8 +402,9 @@ height="3.2291666666666665in"}
 > as 54-63, 24-30 etc. So the statistical measure as **ranges** is
 > tagged.
 
-![](media/image5.jpeg){width="5.8180555555555555in"
-height="1.1666666666666667in"}Fig5: Range as Stat
+![Fig. 5](img/guidelines_5.jpg)
+
+Fig5: Range as Stat
 
 > ***Example 2.* Means and Range:** In this example two statistical
 > measures are provided with relevant data i-e **means** and **range**.
@@ -416,25 +413,23 @@ height="1.1666666666666667in"}Fig5: Range as Stat
 
 **Fig6: Means and Range as Stat**
 
-> ![](media/image6.jpeg){width="6.004861111111111in"
-> height="1.1145833333333333in"}
->
-> ***Example 3.* Means+-SD, range and Coefficient of Variation:** In
-> this example three statistical measures can be identified.) **means**
-> is **coupled with SD** and is taken as one measurement. **Range** and
-> **coefficient of variation** are other two stat measure tags.
+![Fig. 6](img/guidelines_6.jpg)
+
+***Example 3.* Means+-SD, range and Coefficient of Variation:** In
+this example three statistical measures can be identified.) **means**
+is **coupled with SD** and is taken as one measurement. **Range** and
+**coefficient of variation** are other two stat measure tags.
 
 **Fig7: Means +-SD,range and Coefficient of Variation as Stat**
 
-> ![](media/image7.jpeg){width="5.979166666666667in" height="0.975in"}
->
-> ***Example 4.* means+-SD, range:** In this example two stat measures
-> means+-SD and range are separately tagged.
+ ![Fig. 7](img/guidelines_7.jpg)
+
+ ***Example 4.* means+-SD, range:** In this example two stat measures
+ means+-SD and range are separately tagged.
 
 **Fig8: Means +-SD,range as Stat**
 
-> ![](media/image8.jpeg){width="6.0159722222222225in"
-> height="1.0208333333333333in"}
+![Fig. 8](img/guidelines_8.jpg)
 
 ### 2.4.2 Species (verbatimScientificName)
 
@@ -450,46 +445,44 @@ Example
 
 **Fig9 : Species Tag**
 
-![](media/image9.png){width="5.545138888888889in" height="0.96875in"}
+![Fig. 9](img/guidelines_9.jpg)
 
 ### 2.4.3 Trait and TraitVal (verbatimTraitName & verbatimTraitVal)
 
-> The trait names and their values are the most important named entities
-> to annotate and as such if you have annotated a trait value you MUST
-> annotate a species name and a trait name. Secondly, if a TraitName is
-> not explicit in text - for example, if you have a measurement of a
-> tail but what measurement it is (i.e: circumference, length, etc.) is
-> not specified - then you must annotate it anyway to be interpreted in
-> posteriority.
->
-> Example
->
-> The Trait Names tagged as **Trait** should have their respective
-> TraitValues as TraitVal in the measurement. Consider this example,
-> where the trait names include a whole expression including "length
-> of", "breadth of", "height of", etc. These components are essential
-> information comprising the traitname.
->
-> **Fig10: Trait as Tag**
-> ![](media/image10.jpeg){width="6.0256944444444445in"
-> height="2.8125in"}
->
-> The trait names in the above fig are boxed green. You can see that the
-> whole trait with its measured terms are included for tag.
->
-> ***Example 1.*** Next we are interested in Trait Values which could be
-> measured by stated stat values as means, ranges etc. In this example
-> the Trait Values are based on Stat values means and ranges already
-> mentioned as Stat tags. The Trait Values are tagged accordingly.
-> Additionally, consider that occasionally the trait name might be
-> separated. In these situations annotate the rightmost term, to be
-> interpreted in posteriority.
+The trait names and their values are the most important named entities
+to annotate and as such if you have annotated a trait value you MUST
+annotate a species name and a trait name. Secondly, if a TraitName is
+not explicit in text - for example, if you have a measurement of a
+tail but what measurement it is (i.e: circumference, length, etc.) is
+not specified - then you must annotate it anyway to be interpreted in
+posteriority.
+
+Example
+
+The Trait Names tagged as **Trait** should have their respective
+TraitValues as TraitVal in the measurement. Consider this example,
+where the trait names include a whole expression including "length
+of", "breadth of", "height of", etc. These components are essential
+information comprising the traitname.
+
+**Fig10: Trait as Tag**
+![Fig. 10](img/guidelines_10.jpg)
+
+The trait names in the above fig are boxed green. You can see that the
+whole trait with its measured terms are included for tag.
+
+***Example 1.*** Next we are interested in Trait Values which could be
+measured by stated stat values as means, ranges etc. In this example
+the Trait Values are based on Stat values means and ranges already
+mentioned as Stat tags. The Trait Values are tagged accordingly.
+Additionally, consider that occasionally the trait name might be
+separated. In these situations annotate the rightmost term, to be
+interpreted in posteriority.
 
 Fig11: TraitVal as Tag
 
-> ![](media/image11.jpeg){width="5.901388888888889in"
-> height="2.7395833333333335in"}
->
+![Fig. 11](img/guidelines_11.jpg)
+
 > ***Example 2.*** In this example, the authors have chosen to organise
 > their measurements by body segment, creating sentences starting with a
 > segment like "prosoma" and then specifying the measurement. Both
@@ -498,8 +491,7 @@ Fig11: TraitVal as Tag
 
 Fig12: TraitVal as Tag
 
-![](media/image12.png){width="5.947916666666667in"
-height="0.7680555555555556in"}
+![Fig. 12](img/guidelines_12.jpg)
 
 ### 2.4.4 Ref (References)
 
@@ -520,8 +512,7 @@ height="0.7680555555555556in"}
 
 Fig13: Loc as Tag
 
-> ![](media/image13.png){width="6.1402777777777775in"
-> height="0.7916666666666666in"}
+![Fig. 13](img/guidelines_13.jpg)
 
 ### 2.4.6 Count (individualCount)
 
@@ -531,8 +522,7 @@ Fig13: Loc as Tag
 
 Fig14: Count as Tag
 
-> ![](media/image14.jpeg){width="5.989583333333333in"
-> height="0.8013888888888889in"}
+![Fig. 14](img/guidelines_14.jpg)
 
 # 3. RELATIONS ANNOTATION GUIDELINES
 
@@ -556,11 +546,10 @@ Fig14: Count as Tag
 > this only works with external mice, it will not work with laptop
 > trackpads!
 >
-> Fig 15 : Create Relation between TraitVal and Trait.
->
-> ![](media/image15.jpeg){width="5.745138888888889in"
-> height="0.8958333333333334in"}
->
+Fig 15 : Create Relation between TraitVal and Trait.
+
+![Fig. 15](img/guidelines_15.jpg)
+
 > Once the link is established, on the right side the information will
 > be displayed. Confirm the relations are correctly done. **From** and
 > **To** tabs will show the values i-e TraitVal and Trait in this case.
@@ -568,16 +557,15 @@ Fig14: Count as Tag
 > meas_trait in this case. As TraitVal is linked to Trait its meas_trait
 > is selected.
 >
-> Fig 16 : Relation Values between TraitVal and Trait.
->
-> ![](media/image16.jpeg){width="2.90625in"
-> height="4.083333333333333in"}
->
+ Fig 16 : Relation Values between TraitVal and Trait.
+
+![Fig. 16](img/guidelines_16.jpg)
+
 > The relation **meas_trait** will be shown between the entities.
 
 Fig 17 : Relation between TraitVal and Trait.
 
-![](media/image17.jpeg){width="5.770833333333333in" height="1.075in"}
+![Fig. 17](img/guidelines_17.jpg)
 
 Likewise, create relations between one particular TraitVal with all its
 value. In Fig15 TraitVal (15.9) has to be linked with its attributes :
@@ -620,8 +608,7 @@ of corresponding tags.
 A bit trickier but not by much. The starting term is Species with only
 one exception, GIVEN COORDS:
 
-![](media/image18.png){width="6.268055555555556in"
-height="1.0277777777777777in"}
+![Fig. 18](img/guidelines_18.jpg)
 
 TABLE 2: RELATION TABLE BETWEEN ENTITIES. TRAITS
 
