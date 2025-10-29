@@ -14,7 +14,7 @@ The ETS-fields are annotated using NER-Tags that are listed in Table1
     <th>ETS-Term</th>
     <th>NER Tags</th>
     <th>IOB Tags</th>
-    <th>DEFINITION (See: https://terminologies.gfbio.org/terms/ets/pages/)</th>
+    <th>DEFINITION<br>(See: https://terminologies.gfbio.org/terms/ets/pages/)</th>
     <th>EXAMPLES</th>
   </tr>
   <tr>
@@ -22,38 +22,40 @@ The ETS-fields are annotated using NER-Tags that are listed in Table1
     <td>Species</td>
     <td>B-Taxon I-Taxon</td>
     <td>Original character string provided as species name or taxon identifier by the data provider.</td>
-    <td>“Pan paniscus”; <ins>“Arachnida”</ins>; “C. planirostris”; “L. brasiliense”</td>
+    <td>"<b>Silometopus ambiguus</b> (Figs 10-12): BELGIUM: West-Vlaanderen: Knokke, Zwin Nature Reserve (51.367°N,3.367°E, 2 m a.s.l.), 2 males, 6 females, pitfall traps in salt marsh, 2.–16. Jun. 2014, J. Van Keer leg., R. Bosmans coll.";<br>
+     “Pan paniscus”; “Arachnida”;  “C. planirostris”; “L. brasiliense”</td>
   </tr>
   <tr>
     <td>verbatimLocality</td>
     <td>Loc</td>
     <td>B-Loc,I-Loc</td>
     <td>The specific description of a place.</td>
-    <td>“Florida”;“Germany”</td>
+    <td>"Silometopus ambiguus (Figs 10-12): <b>BELGIUM: West-Vlaanderen: Knokke, Zwin Nature Reserve</b> (51.367°N,3.367°E, 2 m a.s.l.), 2 males, 6 females, pitfall traps in salt marsh, 2.–16. Jun. 2014, J. Van Keer leg., R. Bosmans coll."; <br> 
+     “Florida”; “Germany”</td>
   </tr>
   <tr>
     <td></td>
     <td>LocDate</td>
     <td></td>
     <td>The date at which a Species was observed in a specific location (LOC)</td>
-    <td>“10.09.2009”, “3 March 2022”, “24.IV.2009”. “Type material: Holotype: Male collected from banana agro-ecosystems near Raver (21.25 ° N, 76.03° E), Distt. Jalgaon, Maharashtra, India, 21- 25 December 2012, Seema Keswani, deposited at Arachnology Museum, Forest Training Institute, Chikhaldara, Maharashtra-India”</td>
+    <td>“Type material: Holotype: Male collected from banana agro-ecosystems near Raver (21.25 ° N, 76.03° E), Distt. Jalgaon, Maharashtra, India, <b>21-25 December 2012</b>, Seema Keswani, deposited at Arachnology Museum, Forest Training Institute, Chikhaldara, Maharashtra-India”; <br> “10.09.2009”; “3 March 2022”; “24.IV.2009” </td>
   </tr>
   <tr>
     <td>verbatimCoordinateSystem</td>
     <td>CoordSys</td>
     <td>B-CoordSys</td>
-    <td>See: https://dwc.tdwg.org/terms/#dwc:verbatimCoordinateSystem</td>
-    <td>decimal degrees, degrees decimal minutes, degrees minutes seconds, UTM, EPSG:4326, WGS84, NAD27, Campo Inchauspe, European 1950, Clarke 1866 http://wiki.gis.com/wiki/index.php/Datum_(geodesy)#List_of_Datums
+    <td>See: https://dwc.tdwg.org/terms/#dwc:verbatimCoordinateSystem & <br> http://wiki.gis.com/wiki/index.php/Datum_(geodesy)#List_of_Datums</td> 
+    <td>decimal degrees, degrees decimal minutes, degrees minutes seconds, UTM, EPSG:4326, WGS84, NAD27, Campo Inchauspe, European 1950, Clarke 1866
 </td>
   </tr>
   <tr>
     <td>verbatimCoordinates</td>
     <td>Coord</td>
     <td>B-Coord I-Coord</td>
-    <td>See: https://dwc.tdwg.org/terms/#dwc:verbatimCoordinates
+    <td>See: https://dwc.tdwg.org/terms/#dwc:verbatimCoordinates<br><br>
 Some papers will have coordinates provided by the authors with greater precision than checking a gazetteer for locations. Could be in several datums and coord systems.</td>
-    <td>(39.8210N 2.7951E), (-41.0983, -121.1761),17T 630084 4833438, 41 05 54S 121 05 34W, -77.508333, 164.754167, 77° 30.5' S, 164° 45.25' E, 77° 30' 29.9988" S, 164° 45' 15.0012" E, -1314485.732632,	358267.239976
-</td>
+    <td>"Silometopus ambiguus (Figs 10-12): BELGIUM: West-Vlaanderen: Knokke, Zwin Nature Reserve (<b>51.367°N,3.367°E</b>, 2 m a.s.l.), 2 males, 6 females, pitfall traps in salt marsh, 2.–16. Jun. 2014, J. Van Keer leg., R. Bosmans coll."; <br>
+     (39.8210N 2.7951E); (-41.0983, -121.1761); 17T 630084 4833438; 41 05 54S 121 05 34W; -77.508333, 164.754167; 77° 30.5' S, 164° 45.25' E; 77° 30' 29.9988" S, 164° 45' 15.0012"; E -1314485.732632, 358267.239976</td>
   </tr>
   <tr>
     <td>verbatimTraitName</td>
@@ -67,39 +69,32 @@ Some papers will have coordinates provided by the authors with greater precision
     <td>TraitVal</td>
     <td>B-TrVal, I-TrVal</td>
     <td>Measurement trait values: Trait Value can be a numerical measurement (56-57, 12). Describing the ranges of calculated data including min, max value and number of specimens. This is a very abstract form of an entity as measurement ranges can hold mean, SD, ranges (min, max) which cannot be separately tagged. So it should be tagged as a compound.</td>
-    <td>33.57 (31.36-36.56, 50), 29.5-34.6, 6.5, 7.5, 12.7 ± 0.2
-</td>
+    <td>"Description. Female (Type 1): Total length <b>4.85-5.29</b>b> (LG01-03, n=3). One specimen (LG01) measured: body length <b>5.20</b>b>; cephalothorax <b>2.21</b>b> long, <b>2.17</b>b> wide; abdomen <b>2.99</b>b> long, <b>2.48</b>b> wide (Fig. 1)." <br>
+     33.57 (31.36-36.56, 50); 29.5-34.6; 6.5, 7.5; 12.7 ± 0.2</td>
   </tr>
   <tr>
     <td>verbatimTraitUnit</td>
     <td>Unit</td>
     <td>B-Unit</td>
     <td>The unit value of the measured trait. These values should only be tagged if they are describing the unit of the trait value measurement. Irrelevant data units should be avoided.</td>
-    <td>g, mm, cm, kg, inches, in</td>
+    <td>"g"; "mm"; "cm"; "kg"; "inches"; "15 <b>in</b>b>"</td>
   </tr>
   <tr>
     <td>individualCount</td>
     <td>Count</td>
     <td>B-Count</td>
-    <td>Number of specimens. It must be a numerical value either in number or textual form. It should be only tagged as mentioned separately in examples. If they are part of the range then do not tag them separately as (23-25,13) this is part of the range now.
-</td>
-    <td>15 males,
-
-One female, three of the specimens.
-
-10 females
-
-Specimen of 15 organisms,
-
-n = 16</td>
+    <td>Number of specimens. It must be a numerical value either in number or textual form. It should be only tagged as mentioned separately in examples. If they are part of the range then do not tag them separately as (23-25,13) this is part of the range now.</td>
+   <td>
+   "Silometopus ambiguus (Figs 10-12): BELGIUM: West-Vlaanderen: Knokke, Zwin Nature Reserve (51.367°N,3.367°E, 2 m a.s.l.), 2 males, 6 females, pitfall traps in salt marsh, 2.–16. Jun. 2014, J. Van Keer leg., R. Bosmans coll."; <br>
+"<b>15</b> males";  "<b>One</b> female, <b>three</b> of the specimens."; "<b>10</b> females."; "Specimen of <b>15</b> organisms"; "n = <b>16</b>"</td>
   </tr>
   <tr>
     <td>StatisticalMethod</td>
     <td>Stat</td>
     <td>B-Stat,I-Stat</td>
     <td>For aggregated measures, the method for data aggregation or averaging as well as the variation or range.</td>
-    <td>means (mm; ranges)
-     SD (mm; range, coefficient of variation)</td>
+    <td>"In Brazil (Vizotto and Taddei 1976), <b>means SD (mm; range, coefficient of variation)</b>b> for 15 males and 15 females, respectively."; <br>
+"means (mm; ranges)"; "SD (mm; range, coefficient of variation)"</td>
   </tr>
     <tr>
     <td>sex</td>
@@ -121,9 +116,7 @@ n = 16</td>
     <td>Ref</td>
     <td>B-Ref, I-Ref</td>
     <td>A citation that references the measurements of trait data. There can be many citations in the document. But only the ones that relate to providing trait information should be tagged.</td>
-    <td>Gimenez and Giannini (2016) provided means (mm; ranges) of craniodental measurements.
-     Peters et al. (2002) reported the following means (mm; ranges) for six females and 12 males, respectively.
-     In Brazil ( Vizotto and Taddei 1976 ), means SD (mm; range, coefficient of variation) for 15 males and 15 females, respectively</td>
+    <td><b>Gimenez and Giannini (2016)</b> provided means (mm; ranges) of craniodental measurements. <b>Peters et al. (2002)</b> reported the following means (mm; ranges) for six females and 12 males, respectively. In Brazil (<b>Vizotto and Taddei 1976</b>), means SD (mm; range, coefficient of variation) for 15 males and 15 females, respectively</td>
   </tr>
     <tr>
     <td>measurementDeterminedDate</td>
