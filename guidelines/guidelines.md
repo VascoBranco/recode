@@ -590,42 +590,46 @@ one exception, GIVEN COORDS:
 ![Fig. 18](img/guidelines_18.jpg)
 
 TABLE 2: RELATION TABLE BETWEEN ENTITIES. TRAITS
-
-  ---------------------------------------------------------------------------------------------------------------------------
-  **NAME**           **ENTITY   **ENTITY   **RELATION**                                         **REMARKS**
-                     1**        2**                                                             
-  ------------------ ---------- ---------- ---------------------------------------------------- -----------------------------
-  **MEASUREMENT                                                                                 
-  RELATIONS**                                                                                   
-
-  **meas_Species**   TraitVal   Species    **verbatimTraitValue**--**verbatimScientificName**   Trait Value of Species linked
-                                                                                                with Species Name
-
-  **meas_trait**     TraitVal   Trait      **verbatimTraitValue**--**verbatimTraitName**        Trait Value linked with Trait
-                                                                                                Name
-
-  **meas_Unit**      TraitVal   Unit       **verbatimTraitValue**--**verbatimTraitUnit**        Trait Value linked with its
-                                                                                                Trait Unit
-
-  **meas_Stat**      TraitVal   Stat       **verbatimTraitValue**--**StatisticalMethod**        Trait Value linked with
-                                                                                                Statistical Methods (e.g
-                                                                                                range, means+-SD, SD,
-                                                                                                coefficient of variations)
-
-  **meas_Loc**       TraitVal   Loc        **verbatimTraitValue**--**verbatimLocality**         The Location where the
-                                                                                                measurements were made is
-                                                                                                linked with TraitValue.
-
-  **meas_Count**     TraitVal   Count      **verbatimTraitValue**--**individualCount**          
-
-  **meas_Sex**       TraitVal   Sex        **verbatimTraitValue**--**Sex**                      
-
-  **meas_LStage**    TraitVal   LStage     **verbatimTraitValue**--**LifeStage**                
-
-  **meas_Ref**       TraitVal   Ref        **verbatimTraitValue**--**References**               
-
-  **meas_Date**      TraitVal   Date       **verbatimTraitValue--measurementDeterminedDate**    
-  ---------------------------------------------------------------------------------------------------------------------------
+ <table>
+  <tr>
+    <th>NAME</th>
+    <th>ENTITY 1</th>
+    <th>ENTITY 2</th>
+    <th>RELATION</th>
+    <th>REMARKS</th>
+  </tr>
+  <tr>
+    <th colspan="5">MEASUREMENT RELATIONS</th>
+  </tr>
+  <tr>
+    <td>meas_Species</td>
+    <td>TraitVal</td>
+    <td>Species</td>
+    <td>verbatimTraitValue–verbatimScientificName</td>
+    <td>Trait Value of Species linked with Species Name</td>
+  </tr>
+  <tr>
+    <td>meas_Trait</td>
+    <td>TraitVal</td>
+    <td>Trait</td>
+    <td>verbatimTraitValue–verbatimTraitName</td>
+    <td>Trait Value linked with Trait Name</td>
+  </tr>
+  <tr>
+    <td>meas_Unit</td>
+    <td>TraitVal</td>
+    <td>Unit</td>
+    <td>verbatimTraitValue–verbatimTraitUnit</td>
+    <td>Trait Value linked with its Trait Unit</td>
+  </tr>
+  <tr>
+    <td>meas_Stat</td>
+    <td>TraitVal</td>
+    <td>Stat</td>
+    <td>verbatimTraitValue–StatisticalMethod</td>
+    <td>Trait Value linked with Statistical Methods (e.g range, means+-SD, SD, coefficient of variations)</td>
+  </tr>
+</table> 
 
 TABLE 3: RELATION TABLE BETWEEN ENTITIES. OCCURENCES.
 
