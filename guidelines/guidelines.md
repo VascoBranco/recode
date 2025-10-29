@@ -26,96 +26,111 @@ The ETS-fields are annotated using NER-Tags that are listed in Table1
   </tr>
   <tr>
     <td>verbatimLocality</td>
-    <td></td>
-    <td></td>
+    <td>Loc</td>
+    <td>B-Loc,I-Loc</td>
     <td>The specific description of a place.</td>
-    <td></td>
+    <td>“Florida”;“Germany”</td>
   </tr>
   <tr>
     <td></td>
-    <td></td>
+    <td>LocDate</td>
     <td></td>
     <td>The date at which a Species was observed in a specific location (LOC)</td>
-    <td></td>
+    <td>“10.09.2009”, “3 March 2022”, “24.IV.2009”. “Type material: Holotype: Male collected from banana agro-ecosystems near Raver (21.25 ° N, 76.03° E), Distt. Jalgaon, Maharashtra, India, 21- 25 December 2012, Seema Keswani, deposited at Arachnology Museum, Forest Training Institute, Chikhaldara, Maharashtra-India”</td>
   </tr>
   <tr>
     <td>verbatimCoordinateSystem</td>
-    <td></td>
-    <td></td>
+    <td>CoordSys</td>
+    <td>B-CoordSys</td>
     <td>See: https://dwc.tdwg.org/terms/#dwc:verbatimCoordinateSystem</td>
-    <td></td>
+    <td>decimal degrees, degrees decimal minutes, degrees minutes seconds, UTM, EPSG:4326, WGS84, NAD27, Campo Inchauspe, European 1950, Clarke 1866 http://wiki.gis.com/wiki/index.php/Datum_(geodesy)#List_of_Datums
+</td>
   </tr>
   <tr>
     <td>verbatimCoordinates</td>
-    <td></td>
-    <td></td>
+    <td>Coord</td>
+    <td>B-Coord I-Coord</td>
     <td>See: https://dwc.tdwg.org/terms/#dwc:verbatimCoordinates
 Some papers will have coordinates provided by the authors with greater precision than checking a gazetteer for locations. Could be in several datums and coord systems.</td>
-    <td></td>
+    <td>(39.8210N 2.7951E), (-41.0983, -121.1761),17T 630084 4833438, 41 05 54S 121 05 34W, -77.508333, 164.754167, 77° 30.5' S, 164° 45.25' E, 77° 30' 29.9988" S, 164° 45' 15.0012" E, -1314485.732632,	358267.239976
+</td>
   </tr>
   <tr>
     <td>verbatimTraitName</td>
-    <td></td>
-    <td></td>
+    <td>Trait</td>
+    <td>B-Trait, I-Trait</td>
     <td>Original character string provided as trait label by the data provider. This may include abbreviations of trait names.</td>
-    <td></td>
+    <td>“Tail length”, “greatest length of skull”, “GLS”</td>
   </tr>
   <tr>
     <td>verbatimTraitValue</td>
-    <td></td>
-    <td></td>
+    <td>TraitVal</td>
+    <td>B-TrVal, I-TrVal</td>
     <td>Measurement trait values: Trait Value can be a numerical measurement (56-57, 12). Describing the ranges of calculated data including min, max value and number of specimens. This is a very abstract form of an entity as measurement ranges can hold mean, SD, ranges (min, max) which cannot be separately tagged. So it should be tagged as a compound.</td>
-    <td></td>
+    <td>33.57 (31.36-36.56, 50), 29.5-34.6, 6.5, 7.5, 12.7 ± 0.2
+</td>
   </tr>
   <tr>
     <td>verbatimTraitUnit</td>
-    <td></td>
-    <td></td>
+    <td>Unit</td>
+    <td>B-Unit</td>
     <td>The unit value of the measured trait. These values should only be tagged if they are describing the unit of the trait value measurement. Irrelevant data units should be avoided.</td>
-    <td></td>
+    <td>g, mm, cm, kg, inches, in</td>
   </tr>
-    <tr>
+  <tr>
     <td>individualCount</td>
-    <td></td>
-    <td></td>
+    <td>Count</td>
+    <td>B-Count</td>
     <td>Number of specimens. It must be a numerical value either in number or textual form. It should be only tagged as mentioned separately in examples. If they are part of the range then do not tag them separately as (23-25,13) this is part of the range now.
 </td>
-    <td></td>
+    <td>15 males,
+
+One female, three of the specimens.
+
+10 females
+
+Specimen of 15 organisms,
+
+n = 16</td>
   </tr>
-    <tr>
+  <tr>
     <td>StatisticalMethod</td>
-    <td></td>
-    <td></td>
+    <td>Stat</td>
+    <td>B-Stat,I-Stat</td>
     <td>For aggregated measures, the method for data aggregation or averaging as well as the variation or range.</td>
-    <td></td>
+    <td>means (mm; ranges)
+     SD (mm; range, coefficient of variation)</td>
   </tr>
     <tr>
     <td>sex</td>
-    <td></td>
-    <td></td>
+    <td>Sex</td>
+    <td>B-Sex</td>
     <td>The sex of the biological individual(s). This should imply sexes whose trait data is given. and can be either a noun or a gender symbol, ♂, ♀, ☿.</td>
-    <td></td>
+    <td>“male”, “female”, “unknown”, “hermaphrodite”, “2 ♂♂”, “m”, “f”, “mf”, “mm”, “ff”</td>
   </tr>
     <tr>
     <td>lifeStage</td>
-    <td></td>
-    <td></td>
+    <td>LStage</td>
+    <td>B-LStage,I-Lstage
+</td>
     <td>The age class or life stage of the biological individual(s).</td>
-    <td></td>
+    <td>“juvenile”, “juv.”, “j.”, “jj.”, “subadult”, “adult”, “ad.”, “egg”, “larva”, “pupa”, “spiderling”, “instar”, “nymph”.</td>
   </tr>
     <tr>
     <td>measurementRemarks</td>
-    <td></td>
-    <td></td>
+    <td>Ref</td>
+    <td>B-Ref, I-Ref</td>
     <td>A citation that references the measurements of trait data. There can be many citations in the document. But only the ones that relate to providing trait information should be tagged.</td>
-    <td></td>
+    <td>Gimenez and Giannini (2016) provided means (mm; ranges) of craniodental measurements.
+     Peters et al. (2002) reported the following means (mm; ranges) for six females and 12 males, respectively.
+     In Brazil ( Vizotto and Taddei 1976 ), means SD (mm; range, coefficient of variation) for 15 males and 15 females, respectively</td>
   </tr>
     <tr>
     <td>measurementDeterminedDate</td>
-    <td></td>
-    <td></td>
+    <td>Date</td>
+    <td>B-Date,I-Date</td>
     <td>The date on which the MeasurementOrFact was made.</td>
-    <td></td>
+    <td>“1900”, “April 1900”, “12 Feb 1900”, “12.02.1900”, “02-12-1900”</td>
   </tr>
 </table> 
 
