@@ -285,40 +285,24 @@ Measurements often included an animal's phenotype (head circumference, body leng
 > **[Extracted labels of above mentioned traits as described in]{.mark}
 > [TABLE 1 ANNOTATION ENTITY TAGS AND DEFINITIONS]{.underline}.**
 
-  -----------------------------------------------------------------------
-  **[Text]{.mark}**                   **[Tag]{.mark}**
-  ----------------------------------- -----------------------------------
-  Vizotto and Taddei 1976             [Ref]{.mark}
-
-  means + SD                          [Stat]{.mark}
-
-  mm                                  [Unit]{.mark}
-
-  range                               [Stat]{.mark}
-
-  coefficient of variation            [Stat]{.mark}
-
-  15                                  [Count]{.mark}
-
-  males                               [Sex]{.mark}
-
-  15                                  [Count]{.mark}
-
-  females                             [Sex]{.mark}
-
-  head-body length                    [Trait]{.mark}
-
-  55.7 + 0.5                          [TraitVal]{.mark}
-
-  51.0-59.0                           [TraitVal]{.mark}
-
-  3.3                                 [TraitVal]{.mark}
-
-  52.9 + 0.3                          [TraitVal]{.mark}
-
-  50.5-54.5                           [TraitVal]{.mark}
-
-  2.4                                 [TraitVal]{.mark}
+  **[Text]{.mark}**                  | **[Tag]{.mark}**
+  -----------------------------------|-----------------------------------
+  Vizotto and Taddei 1976            | [Ref]{.mark}
+  means + SD                         | [Stat]{.mark}
+  mm                                 | [Unit]{.mark}
+  range                              | [Stat]{.mark}
+  coefficient of variation           | [Stat]{.mark}
+  15                                 | [Count]{.mark}
+  males                              | [Sex]{.mark}
+  15                                 | [Count]{.mark}
+  females                            | [Sex]{.mark}
+  head-body length                   | [Trait]{.mark}
+  55.7 + 0.5                         | [TraitVal]{.mark}
+  51.0-59.0                          | [TraitVal]{.mark}
+  3.3                                | [TraitVal]{.mark}
+  52.9 + 0.3                         | [TraitVal]{.mark}
+  50.5-54.5                          | [TraitVal]{.mark}
+  2.4                                | [TraitVal]{.mark}
   -----------------------------------------------------------------------
 
 > []{.mark}
@@ -645,37 +629,39 @@ TABLE 2: RELATION TABLE BETWEEN ENTITIES. TRAITS
 
 TABLE 3: RELATION TABLE BETWEEN ENTITIES. OCCURENCES.
 
-+---------+------+-------+----------+---------------------------------+
-| *       | **EN | **E   | **RE     | **REMARKS**                     |
-| *NAME** | TITY | NTITY | LATION** |                                 |
-|         | 1**  | 2**   |          |                                 |
-+=========+======+=======+==========+=================================+
-| **      |      |       |          |                                 |
-| SPECIES |      |       |          |                                 |
-| L       |      |       |          |                                 |
-| OCATION |      |       |          |                                 |
-| REL     |      |       |          |                                 |
-| ATION** |      |       |          |                                 |
-+---------+------+-------+----------+---------------------------------+
-| **O     | Spe  | Loc / | Spe      | Occurrence of a species at any  |
-| CCURS** | cies | Coord | cies→Loc | location. If unpaired, i.e.: is |
-|         |      |       |          | described only with a set of    |
-|         |      |       | (O       | coordinates, Coord is the end   |
-|         |      |       | ne-Many) | term, otherwise Loc takes       |
-|         |      |       |          | precedence.                     |
-+---------+------+-------+----------+---------------------------------+
-| *       | Spe  | Lo    | Species  |                                 |
-| *DATE** | cies | cDate | →LocDate |                                 |
-|         |      |       |          |                                 |
-|         |      |       | (O       |                                 |
-|         |      |       | ne-Many) |                                 |
-+---------+------+-------+----------+---------------------------------+
-| **GIVEN | Loc  | Coord | L        | If a location is described with |
-| C       |      |       | oc→Coord | both a Loc and Coord entities,  |
-| OORDS** |      |       |          | this relation is established    |
-|         |      |       | (        | between them.                   |
-|         |      |       | One-One) |                                 |
-+---------+------+-------+----------+---------------------------------+
+ <table>
+  <tr>
+    <th>NAME</th>
+    <th>ENTITY 1</th>
+    <th>ENTITY 2</th>
+    <th>RELATION</th>
+    <th>REMARKS</th>
+  </tr>
+  <tr>
+    <th colspan="5">SPECIES LOCATION RELATION</th>
+  </tr>
+  <tr>
+    <td>OCCURS</td>
+    <td>Species</td>
+    <td>Loc / Coord</td>
+    <td>Species→Loc</td>
+    <td>Occurrence of a species at any location. If unpaired, i.e.: is described only with a set of coordinates, Coord is the end term, otherwise Loc takes precedence.</td>
+  </tr>
+  <tr>
+    <td>DATE</td>
+    <td>Species</td>
+    <td>LocDate</td>
+    <td>Species→LocDate (One-Many)</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>GIVEN COORDS</td>
+    <td>Loc</td>
+    <td>Coord</td>
+    <td>Loc→Coord (One-One)</td>
+    <td>If a location is described with both a Loc and Coord entities, this relation is established between them.</td>
+  </tr>
+</table> 
 
 # 4. End notes
 
