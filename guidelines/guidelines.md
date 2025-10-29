@@ -9,251 +9,115 @@ First let's have a brief introduction about the entities that are involved in ta
 The ETS-fields are annotated using NER-Tags that are listed in Table1
 
 **TABLE 1: ANNOTATION ENTITY TAGS AND DEFINITIONS**
-
-+-----------+------+------+----------------------+------------------+
-| **E       | *    | *    | **Definition.**      | **Examples**     |
-| TS-Term** | *NER | *IOB |                      |                  |
-|           | Ta   | Ta   | **See:               |                  |
-|           | gs** | gs** | [[https://termin     |                  |
-|           |      |      | ologies.gfbio.org/te |                  |
-|           |      |      | rms/ets/pages/]{.und |                  |
-|           |      |      | erline}](https://ter |                  |
-|           |      |      | minologies.gfbio.org |                  |
-|           |      |      | /terms/ets/pages/)** |                  |
-+===========+======+======+======================+==================+
-| verb      | Spe  | B-T  | Original character   | "Pan paniscus";  |
-| atimScien | cies | axon | string provided as   | ["Arachni        |
-| tificName |      |      | species name or      | da"]{.underline} |
-|           |      | I-T  | taxon identifier by  |                  |
-|           |      | axon | the data provider.   | "C.              |
-|           |      |      |                      | planirostris"    |
-|           |      |      |                      |                  |
-|           |      |      |                      | "L. brasiliense" |
-+-----------+------+------+----------------------+------------------+
-| verbati   | Loc  | B-   | The specific         | "Florida";       |
-| mLocality |      | Loc, | description of a     | "Germany"        |
-|           |      |      | place.               |                  |
-|           |      | I    |                      |                  |
-|           |      | -Loc |                      |                  |
-+-----------+------+------+----------------------+------------------+
-|           | Loc  |      | The date at which a  | "10.09.2009", "3 |
-|           | Date |      | Species was observed | March 2022",     |
-|           |      |      | in a specific        | "24.IV.2009".    |
-|           |      |      | location (LOC)       |                  |
-|           |      |      |                      | "Type material:  |
-|           |      |      |                      | Holotype: Male   |
-|           |      |      |                      | collected from   |
-|           |      |      |                      | banana           |
-|           |      |      |                      | agro-ecosystems  |
-|           |      |      |                      | near Raver       |
-|           |      |      |                      | (21.25           |
-|           |      |      |                      |                  |
-|           |      |      |                      | ° N, 76.03° E),  |
-|           |      |      |                      | Distt. Jalgaon,  |
-|           |      |      |                      | Maharashtra,     |
-|           |      |      |                      | India, **[21- 25 |
-|           |      |      |                      | December         |
-|           |      |      |                      | 2012             |
-|           |      |      |                      | ]{.underline}**, |
-|           |      |      |                      | Seema Keswani,   |
-|           |      |      |                      |                  |
-|           |      |      |                      | deposited at     |
-|           |      |      |                      | Arachnology      |
-|           |      |      |                      | Museum, Forest   |
-|           |      |      |                      | Training         |
-|           |      |      |                      | Institute,       |
-|           |      |      |                      | Chikhaldara,     |
-|           |      |      |                      | Ma               |
-|           |      |      |                      | harashtra-India" |
-+-----------+------+------+----------------------+------------------+
-| verbat    | Coor | B-   | See:                 | decimal degrees, |
-| imCoordin | dSys | Coor | [[https://           | degrees decimal  |
-| ateSystem |      | dSys | dwc.tdwg.org/terms/# | minutes, degrees |
-|           |      |      | dwc:verbatimCoordina | minutes seconds, |
-|           |      |      | teSystem]{.underline | UTM,             |
-|           |      |      | }](https://dwc.tdwg. |                  |
-|           |      |      | org/terms/#dwc:verba | EPSG:4326,       |
-|           |      |      | timCoordinateSystem) | WGS84, NAD27,    |
-|           |      |      |                      | Campo Inchauspe, |
-|           |      |      |                      | European 1950,   |
-|           |      |      |                      | Clarke 1866      |
-|           |      |      |                      |                  |
-|           |      |      |                      | [[htt            |
-|           |      |      |                      | p://wiki.gis.com |
-|           |      |      |                      | /wiki/index.php/ |
-|           |      |      |                      | Datum\_(geodesy) |
-|           |      |      |                      | #List_of_Datums] |
-|           |      |      |                      | {.underline}](ht |
-|           |      |      |                      | tp://wiki.gis.co |
-|           |      |      |                      | m/wiki/index.php |
-|           |      |      |                      | /Datum_(geodesy) |
-|           |      |      |                      | #List_of_Datums) |
-+-----------+------+------+----------------------+------------------+
-| v         | C    | B-C  | See:                 | (39.8210N        |
-| erbatimCo | oord | oord | [[https://dwc.tdwg.o | 2.7951E),        |
-| ordinates |      |      | rg/terms/#dwc:verbat |                  |
-|           |      | I-C  | imCoordinates]{.unde | (-41.0983,       |
-|           |      | oord | rline}](https://dwc. | -121.1761),      |
-|           |      |      | tdwg.org/terms/#dwc: |                  |
-|           |      |      | verbatimCoordinates) | 17T 630084       |
-|           |      |      |                      | 4833438          |
-|           |      |      | Some papers will     |                  |
-|           |      |      | have coordinates     | 41 05 54S 121 05 |
-|           |      |      | provided by the      | 34W              |
-|           |      |      | authors with greater |                  |
-|           |      |      | precision than       | -77.508333,      |
-|           |      |      | checking a gazetteer | 164.754167       |
-|           |      |      | for locations. Could |                  |
-|           |      |      | be in several datums | 77° 30.5\' S,    |
-|           |      |      | and coord systems.   | 164° 45.25\' E\  |
-|           |      |      |                      | 77° 30\'         |
-|           |      |      |                      | 29.9988\" S,     |
-|           |      |      |                      | 164° 45\'        |
-|           |      |      |                      | 15.0012\" E      |
-|           |      |      |                      |                  |
-|           |      |      |                      | -1314485.732632, |
-|           |      |      |                      | 358267.239976    |
-+-----------+------+------+----------------------+------------------+
-| verbatim  | T    | B-Tr | Original character   | "Tail length",   |
-| TraitName | rait | ait, | string provided as   | "greatest length |
-|           |      |      | trait label by the   | of skull", "GLS" |
-|           |      | I-T  | data provider. This  |                  |
-|           |      | rait | may include          |                  |
-|           |      |      | abbreviations of     |                  |
-|           |      |      | trait names.         |                  |
-+-----------+------+------+----------------------+------------------+
-| verbatimT | Trai | B-Tr | Measurement trait    | 33.57            |
-| raitValue | tVal | Val, | values:              | (31.36-36.56,    |
-|           |      |      |                      | 50)              |
-|           |      | I-T  | Trait Value can be a |                  |
-|           |      | rVal | numerical            | 29.5-34.6        |
-|           |      |      | measurement (56-57,  |                  |
-|           |      |      | 12).                 | 6.5, 7.5         |
-|           |      |      |                      |                  |
-|           |      |      | Describing the       | 12.7 ± 0.2       |
-|           |      |      | ranges of calculated |                  |
-|           |      |      | data including min,  |                  |
-|           |      |      | max value and number |                  |
-|           |      |      | of specimens.        |                  |
-|           |      |      |                      |                  |
-|           |      |      | This is a very       |                  |
-|           |      |      | abstract form of an  |                  |
-|           |      |      | entity as            |                  |
-|           |      |      | measurement ranges   |                  |
-|           |      |      | can hold mean, SD,   |                  |
-|           |      |      | ranges (min, max)    |                  |
-|           |      |      | which cannot be      |                  |
-|           |      |      | separately tagged.   |                  |
-|           |      |      | So it should be      |                  |
-|           |      |      | tagged as a          |                  |
-|           |      |      | compound.            |                  |
-+-----------+------+------+----------------------+------------------+
-| verbatim  | Unit | B-   | The unit value of    | g, mm, cm, kg,   |
-| TraitUnit |      | Unit | the measured trait.  | inches, in       |
-|           |      |      | These values should  |                  |
-|           |      |      | only be tagged if    |                  |
-|           |      |      | they are describing  |                  |
-|           |      |      | the unit of the      |                  |
-|           |      |      | trait value          |                  |
-|           |      |      | measurement.         |                  |
-|           |      |      | Irrelevant data      |                  |
-|           |      |      | units should be      |                  |
-|           |      |      | avoided.             |                  |
-+-----------+------+------+----------------------+------------------+
-| indivi    | C    | B-C  | Number of specimens. | **[1             |
-| dualCount | ount | ount | It must be a         | 5]{.underline}** |
-|           |      |      | numerical value      | males**,**       |
-|           |      |      | either in number or  |                  |
-|           |      |      | textual form.        | **[On            |
-|           |      |      |                      | e]{.underline}** |
-|           |      |      | It should be only    | female**, [three |
-|           |      |      | tagged as mentioned  | ]                |
-|           |      |      | separately in        | {.underline}**of |
-|           |      |      | examples. If they    | the specimens.   |
-|           |      |      | are part of the      |                  |
-|           |      |      | range then do not    | **[1             |
-|           |      |      | tag them separately  | 0]{.underline}** |
-|           |      |      | as (23-25,**13**)    | females          |
-|           |      |      | this is part of the  |                  |
-|           |      |      | range now.           | Specimen of      |
-|           |      |      |                      | **[1             |
-|           |      |      |                      | 5]{.underline}** |
-|           |      |      |                      | organisms,       |
-|           |      |      |                      |                  |
-|           |      |      |                      | n =              |
-|           |      |      |                      | **[1             |
-|           |      |      |                      | 6]{.underline}** |
-+-----------+------+------+----------------------+------------------+
-| Statisti  | Stat | B-S  | For aggregated       | means (mm;       |
-| calMethod |      | tat, | measures, the method | ranges)          |
-|           |      |      | for data aggregation |                  |
-|           |      | I-   | or averaging as well | SD (mm; range,   |
-|           |      | Stat | as the variation or  | coefficient of   |
-|           |      |      | range.               | variation)       |
-+-----------+------+------+----------------------+------------------+
-| sex       | Sex  | B    | The sex of the       | "male",          |
-|           |      | -Sex | biological           | "female",        |
-|           |      |      | individual(s). This  | "unknown",       |
-|           |      |      | should imply sexes   | "hermaphrodite", |
-|           |      |      | whose trait data is  | "2 **♂♂**", "m", |
-|           |      |      | given. and can be    | "f", "mf", "mm", |
-|           |      |      | either a noun or a   | "ff",            |
-|           |      |      | gender symbol, ♂, ♀, |                  |
-|           |      |      | ☿.                   |                  |
-+-----------+------+------+----------------------+------------------+
-| lifeStage | LS   | B-LS | The age class or     | "juvenile",      |
-|           | tage | tage | life stage of the    | "juv.", "j.",    |
-|           |      |      | biological           | "jj.",           |
-|           |      | I-Ls | individual(s).       | "subadult",      |
-|           |      | tage |                      | "adult", "ad.",  |
-|           |      |      |                      | "egg", "larva",  |
-|           |      |      |                      | "pupa",          |
-|           |      |      |                      | "spiderling",    |
-|           |      |      |                      | "instar",        |
-|           |      |      |                      | "nymph".         |
-+-----------+------+------+----------------------+------------------+
-| measureme | Ref  | B-   | A citation that      | **[Gimenez and   |
-| ntRemarks |      | Ref, | references the       | Giannini         |
-| =         |      |      | measurements of      | (2016            |
-| citation  |      | I    | trait data. There    | )]{.underline}** |
-| in the    |      | -Ref | can be many          |                  |
-| text      |      |      | citations in the     | provided means   |
-|           |      |      | document. But only   | (mm; ranges) of  |
-|           |      |      | the ones that relate | craniodental     |
-|           |      |      | to providing trait   | measurements.    |
-|           |      |      | information should   |                  |
-|           |      |      | be tagged.           | **[Peters et al. |
-|           |      |      |                      | (2002            |
-|           |      |      |                      | )]{.underline}** |
-|           |      |      |                      | reported the     |
-|           |      |      |                      | following means  |
-|           |      |      |                      |                  |
-|           |      |      |                      | (mm; ranges) for |
-|           |      |      |                      | six females and  |
-|           |      |      |                      | 12 males,        |
-|           |      |      |                      | respectively.    |
-|           |      |      |                      |                  |
-|           |      |      |                      | In Brazil (      |
-|           |      |      |                      | **[Vizotto and   |
-|           |      |      |                      | Taddei           |
-|           |      |      |                      | 197              |
-|           |      |      |                      | 6]{.underline}** |
-|           |      |      |                      | ), means         |
-|           |      |      |                      |                  |
-|           |      |      |                      | SD (mm; range,   |
-|           |      |      |                      | coefficient of   |
-|           |      |      |                      | variation) for   |
-|           |      |      |                      | 15 males and 15  |
-|           |      |      |                      |                  |
-|           |      |      |                      | females,         |
-|           |      |      |                      | respectively     |
-+-----------+------+------+----------------------+------------------+
-| measure   | Date | B-D  | The date on which    | "1900", "April   |
-| mentDeter |      | ate, | the                  | 1900", "12 Feb   |
-| minedDate |      |      | MeasurementOrFact    | 1900",           |
-|           |      | I-   | was made.            | "12.02.1900",    |
-|           |      | Date |                      | "02-12-1900"     |
-+-----------+------+------+----------------------+------------------+
+ <table>
+  <tr>
+    <th>ETS-Term</th>
+    <th>NER Tags</th>
+    <th>IOB Tags</th>
+    <th>DEFINITION (See: https://terminologies.gfbio.org/terms/ets/pages/)</th>
+    <th>EXAMPLES</th>
+  </tr>
+  <tr>
+    <td>verbatimScientificName</td>
+    <td>Species</td>
+    <td>B-Taxon I-Taxon</td>
+    <td>Original character string provided as species name or taxon identifier by the data provider.</td>
+    <td>“Pan paniscus”; <ins>“Arachnida”</ins>; “C. planirostris”; “L. brasiliense”</td>
+  </tr>
+  <tr>
+    <td>verbatimLocality</td>
+    <td></td>
+    <td></td>
+    <td>The specific description of a place.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>The date at which a Species was observed in a specific location (LOC)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>verbatimCoordinateSystem</td>
+    <td></td>
+    <td></td>
+    <td>See: https://dwc.tdwg.org/terms/#dwc:verbatimCoordinateSystem</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>verbatimCoordinates</td>
+    <td></td>
+    <td></td>
+    <td>See: https://dwc.tdwg.org/terms/#dwc:verbatimCoordinates
+Some papers will have coordinates provided by the authors with greater precision than checking a gazetteer for locations. Could be in several datums and coord systems.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>verbatimTraitName</td>
+    <td></td>
+    <td></td>
+    <td>Original character string provided as trait label by the data provider. This may include abbreviations of trait names.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>verbatimTraitValue</td>
+    <td></td>
+    <td></td>
+    <td>Measurement trait values: Trait Value can be a numerical measurement (56-57, 12). Describing the ranges of calculated data including min, max value and number of specimens. This is a very abstract form of an entity as measurement ranges can hold mean, SD, ranges (min, max) which cannot be separately tagged. So it should be tagged as a compound.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>verbatimTraitUnit</td>
+    <td></td>
+    <td></td>
+    <td>The unit value of the measured trait. These values should only be tagged if they are describing the unit of the trait value measurement. Irrelevant data units should be avoided.</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>individualCount</td>
+    <td></td>
+    <td></td>
+    <td>Number of specimens. It must be a numerical value either in number or textual form. It should be only tagged as mentioned separately in examples. If they are part of the range then do not tag them separately as (23-25,13) this is part of the range now.
+</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>StatisticalMethod</td>
+    <td></td>
+    <td></td>
+    <td>For aggregated measures, the method for data aggregation or averaging as well as the variation or range.</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>sex</td>
+    <td></td>
+    <td></td>
+    <td>The sex of the biological individual(s). This should imply sexes whose trait data is given. and can be either a noun or a gender symbol, ♂, ♀, ☿.</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>lifeStage</td>
+    <td></td>
+    <td></td>
+    <td>The age class or life stage of the biological individual(s).</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>measurementRemarks</td>
+    <td></td>
+    <td></td>
+    <td>A citation that references the measurements of trait data. There can be many citations in the document. But only the ones that relate to providing trait information should be tagged.</td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>measurementDeterminedDate</td>
+    <td></td>
+    <td></td>
+    <td>The date on which the MeasurementOrFact was made.</td>
+    <td></td>
+  </tr>
+</table> 
 
 **NOTE:**
 You will need this table to confirm whether the annotations are correctly done or not. These tags are saved in the INCEpTION
