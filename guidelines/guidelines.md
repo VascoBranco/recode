@@ -629,10 +629,51 @@ TABLE 2: RELATION TABLE BETWEEN ENTITIES. TRAITS
     <td>verbatimTraitValue–StatisticalMethod</td>
     <td>Trait Value linked with Statistical Methods (e.g range, means+-SD, SD, coefficient of variations)</td>
   </tr>
+  <tr>
+    <td>meas_Loc</td>
+    <td>TraitVal</td>
+    <td>Loc</td>
+    <td>verbatimTraitValue–verbatimLocality</td>
+    <td>The Location where the measurements were made is linked with TraitValue.</td>
+  </tr>
+  <tr>
+    <td>meas_Count</td>
+    <td>TraitVal</td>
+    <td>Count</td>
+    <td>verbatimTraitValue–individualCount</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>meas_Sex</td>
+    <td>TraitVal</td>
+    <td>Sex</td>
+    <td>verbatimTraitValue–Sex</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>meas_LStage</td>
+    <td>TraitVal</td>
+    <td>LStage</td>
+    <td>verbatimTraitValue–LifeStage</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>meas_Ref</td>
+    <td>TraitVal</td>
+    <td>Ref</td>
+    <td>verbatimTraitValue–References</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>meas_Date</td>
+    <td>TraitVal</td>
+    <td>Date</td>
+    <td>verbatimTraitValue–measurementDeterminedDate</td>
+    <td> </td>
+  </tr>
 </table> 
 
 TABLE 3: RELATION TABLE BETWEEN ENTITIES. OCCURENCES.
-
  <table>
   <tr>
     <th>NAME</th>
