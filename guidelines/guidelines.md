@@ -1,9 +1,10 @@
 # **ANNOTATION GUIDELINES WITH INCEPTION**
 
-
 <!--ts-->
-   * [Installation](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#introduction)
-   * [Guidelines](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#guidelines-for-annotations)
+   * [1 - Installation](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#introduction)
+   * [2 - Guidelines](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#guidelines-for-annotations)
+   * [3 - Named entity examples and warnings](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#named-entity-examples-&-warnings)
+   * [4 - Relation examples & warnings](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#relation-examples-&-warnings)
 <!--te-->
 
 # INTRODUCTION 
@@ -225,67 +226,41 @@ Fig4: Annotated in Inception
 
 ![Fig. 4](img/guidelines_4.jpg)
 
-## 2.4 EXAMPLES & CAUTIONS FOR ANNOTATORS
+# NAMED ENTITY EXAMPLES & WARNINGS
 
-> There are some rules and norms that have to be followed while
-> annotating each entity. This is to make sure they are consistent for
-> the follow-up analysis. There's quite a few but they're not complex.
-> Repetition while handling multiple scenarios and data variances in
-> publication formats will see you quickly become familiar with them..
-> Here's a few of them as per each tag:
+There are some rules and norms that have to be followed while annotating each entity. This is to make sure they are both consistent to act as training data for statistical models as well as enable follow-up analyses. There's quite a few but they're not complex. Repetition while handling multiple scenarios and data variances in publication formats will see you quickly become familiar with them. Here's a few of them as per each tag:
 
-### 2.4.1 Stat (Statistical Method)
+## 3.4.1 Stat (Statistical Method)
 
-> Stat measures indicate the numerical or statistical method of
-> measurement. This may include ranges, means with SD (Standard
-> Deviation), Coefficient of variation etc. Each statistical method
-> should be independently tagged as a 'Stat' method, only if there is a
-> resultant value present.
->
-> ***Example 1.* Ranges:** A range is the stat measure which is related
-> to the range of any trait value. In the example below: only the ranges
-> of the trait values are provided. The range values can be found later
-> as 54-63, 24-30 etc. So the statistical measure as **ranges** is
-> tagged.
+Stat measures indicate the numerical or statistical method of measurement. This may include ranges, means with SD (Standard Deviation), Coefficient of variation etc. Each statistical method should be independently tagged as a 'Stat' method, only if there is a resultant value present. 
+
+***Example 1.* Ranges:** A range is the stat measure which is related to the range of any trait value. In the example below: only the ranges of the trait values are provided. The range values can be found later as 54-63, 24-30 etc. So the statistical measure as **ranges** is tagged.
+
+> **Fig. 5**. Range as Stat.
 
 ![Fig. 5](img/guidelines_5.jpg)
 
-Fig5: Range as Stat
+***Example 2.* Means and Range:** In this example two statistical measures are provided with relevant data i-e **means** and **range**. Therefore they are separately tagged. Later their corresponding trait values will also be separately tagged.
 
-> ***Example 2.* Means and Range:** In this example two statistical
-> measures are provided with relevant data i-e **means** and **range**.
-> Therefore they are separately tagged. Later their corresponding trait
-> values will also be separately tagged.
-
-**Fig6: Means and Range as Stat**
+> **Fig. 6**. Means and Range as Stat.
 
 ![Fig. 6](img/guidelines_6.jpg)
 
-***Example 3.* Means+-SD, range and Coefficient of Variation:** In
-this example three statistical measures can be identified.) **means**
-is **coupled with SD** and is taken as one measurement. **Range** and
-**coefficient of variation** are other two stat measure tags.
+***Example 3.* Means+-SD, range and Coefficient of Variation:** In this example three statistical measures can be identified.) **means** is **coupled with SD** and is taken as one measurement. **Range** and **coefficient of variation** are other two stat measure tags.
 
-**Fig7: Means +-SD,range and Coefficient of Variation as Stat**
+> **Fig. 7**. Means +-SD,range and Coefficient of Variation as Stat.
 
  ![Fig. 7](img/guidelines_7.jpg)
 
- ***Example 4.* means+-SD, range:** In this example two stat measures
- means+-SD and range are separately tagged.
+***Example 4.* means+-SD, range:** In this example two stat measures means+-SD and range are separately tagged.
 
-**Fig8: Means +-SD,range as Stat**
+**Fig. 8**. Means +-SD,range as Stat.
 
 ![Fig. 8](img/guidelines_8.jpg)
 
 ### 2.4.2 Species (verbatimScientificName)
 
-> A species' scientific name will almost always be written in two
-> specific ways: as a binomial name of genus and specific name (e.g.
-> *Macrothele calpeiana*) or as a binomial of genus abbreviation and
-> specific name (*M. calpeiana*), the latter being used only after the
-> non-abbreviated binomial has already been used in the paper. In some
-> taxa some species might go further and have a sub-species name after
-> the binomial (e.g: *Panthera tigris sumatrae, P. tigris tigris*).
+A species' scientific name will almost always be written in two specific ways: as a binomial name of genus and specific name (e.g. *Macrothele calpeiana*) or as a binomial of genus abbreviation and specific name (*M. calpeiana*), the latter being used only after the non-abbreviated binomial has already been used in the paper. In some taxa some species might go further and have a sub-species name after the binomial (e.g: *Panthera tigris sumatrae, P. tigris tigris*).
 
 Example
 
@@ -295,47 +270,23 @@ Example
 
 ### 2.4.3 Trait and TraitVal (verbatimTraitName & verbatimTraitVal)
 
-The trait names and their values are the most important named entities
-to annotate and as such if you have annotated a trait value you MUST
-annotate a species name and a trait name. Secondly, if a TraitName is
-not explicit in text - for example, if you have a measurement of a
-tail but what measurement it is (i.e: circumference, length, etc.) is
-not specified - then you must annotate it anyway to be interpreted in
-posteriority.
+The trait names and their values are the most important named entities to annotate and as such if you have annotated a trait value you MUST annotate a species name and a trait name. Secondly, if a TraitName is not explicit in text - for example, if you have a measurement of a tail but what measurement it is (i.e: circumference, length, etc.) is not specified - then you must annotate it anyway to be interpreted in posteriority.
 
-Example
+***Example 1.*** The Trait Names tagged as **Trait** should have their respective TraitValues as TraitVal in the measurement. Consider this example, where the trait names include a whole expression including "length of", "breadth of", "height of", etc. These components are essential information comprising the traitname. The trait names in the example figure are boxed green. You can see that the whole trait with its measured terms are included in the tag.
 
-The Trait Names tagged as **Trait** should have their respective
-TraitValues as TraitVal in the measurement. Consider this example,
-where the trait names include a whole expression including "length
-of", "breadth of", "height of", etc. These components are essential
-information comprising the traitname.
+> **Fig. 10**. Trait as Tag.
 
-**Fig10: Trait as Tag**
 ![Fig. 10](img/guidelines_10.jpg)
 
-The trait names in the above fig are boxed green. You can see that the
-whole trait with its measured terms are included for tag.
+***Example 2.*** Next we are interested in Trait Values which could be measured by stated stat values as means, ranges etc. In this example the Trait Values are based on Stat values means and ranges already mentioned as Stat tags. The Trait Values are tagged accordingly. Additionally, consider that occasionally the trait name might be separated. In these situations annotate the rightmost term, to be interpreted in posteriority.
 
-***Example 1.*** Next we are interested in Trait Values which could be
-measured by stated stat values as means, ranges etc. In this example
-the Trait Values are based on Stat values means and ranges already
-mentioned as Stat tags. The Trait Values are tagged accordingly.
-Additionally, consider that occasionally the trait name might be
-separated. In these situations annotate the rightmost term, to be
-interpreted in posteriority.
-
-Fig11: TraitVal as Tag
+> **Fig. 11**. TraitVal as Tag.
 
 ![Fig. 11](img/guidelines_11.jpg)
 
-> ***Example 2.*** In this example, the authors have chosen to organise
-> their measurements by body segment, creating sentences starting with a
-> segment like "prosoma" and then specifying the measurement. Both
-> "long" and "wide" refer to a measurement of the prosoma and could be
-> rewritten as "length of prosoma" and "width of prosoma", for example.
+***Example 3.*** In this example, the authors have chosen to organise their measurements by body segment, creating sentences starting with a segment like "prosoma" and then specifying the measurement. Both "long" and "wide" refer to a measurement of the prosoma and could be rewritten as "length of prosoma" and "width of prosoma", for example.
 
-Fig12: TraitVal as Tag
+> **Fig. 12**. TraitVal as Tag.
 
 ![Fig. 12](img/guidelines_12.jpg)
 
@@ -370,7 +321,7 @@ Fig14: Count as Tag
 
 ![Fig. 14](img/guidelines_14.jpg)
 
-# 3. RELATIONS ANNOTATION GUIDELINES
+# 4. RELATION EXAMPLES & WARNINGS
 
 Relations establish how the named entities relate to each other. Most are made particularly via TraitValue. A trait value is the core measurement value that is linked to the rest of its dependent attributes. A trait value describes one measurement with a complete set of values linked through it. Relations are  nnotated when a complete annotation process is done on the document or after a particular set of annotations are completed that can constitute relations. However, you should always consult Tables 2 and 3 at the **end of this section**.
 
@@ -549,7 +500,7 @@ TABLE 3: RELATION TABLE BETWEEN ENTITIES. OCCURENCES.
   </tr>
 </table> 
 
-# 4. End notes
+# 5. End notes
 
 If you can think of anything specific please suggest it, but we think
 this document should have everything important. The relations are a last
