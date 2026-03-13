@@ -8,7 +8,7 @@ First let's have a brief introduction about the entities that are involved in ta
 -   **IOB Tags** The generated tags according to Conll structure.
 The ETS-fields are annotated using NER-Tags that are listed in Table1
 
-**TABLE 1: ANNOTATION ENTITY TAGS AND DEFINITIONS**
+> **TABLE 1: ANNOTATION ENTITY TAGS AND DEFINITIONS**
  <table>
   <tr>
     <th>ETS-Term</th>
@@ -151,52 +151,37 @@ Measurements often included an animal's phenotype (head circumference, body leng
 > coefficient of variation) for 15 males and 15 females, respectively,
 > were: head-body length, 55.7 + 0.5 (51.0-59.0 , 3.3) , 52.9 + 0.3 (
 > 50.5-54.5 , 2.4) ;
->
-> []{.mark}
->
-> **[Extracted labels of above mentioned traits as described in]{.mark}
-> [TABLE 1 ANNOTATION ENTITY TAGS AND DEFINITIONS]{.underline}.**
 
-  **[Text]{.mark}**                  | **[Tag]{.mark}**
+> **Extracted labels of above mentioned traits as described in Table 1**
+
+  **Text**                  | **Tag**
   -----------------------------------|-----------------------------------
-  Vizotto and Taddei 1976            | [Ref]{.mark}
-  means + SD                         | [Stat]{.mark}
-  mm                                 | [Unit]{.mark}
-  range                              | [Stat]{.mark}
-  coefficient of variation           | [Stat]{.mark}
-  15                                 | [Count]{.mark}
-  males                              | [Sex]{.mark}
-  15                                 | [Count]{.mark}
-  females                            | [Sex]{.mark}
-  head-body length                   | [Trait]{.mark}
-  55.7 + 0.5                         | [TraitVal]{.mark}
-  51.0-59.0                          | [TraitVal]{.mark}
-  3.3                                | [TraitVal]{.mark}
-  52.9 + 0.3                         | [TraitVal]{.mark}
-  50.5-54.5                          | [TraitVal]{.mark}
-  2.4                                | [TraitVal]{.mark}
+  Vizotto and Taddei 1976            | Ref
+  means + SD                         | Stat
+  mm                                 | Unit
+  range                              | Stat
+  coefficient of variation           | Stat
+  15                                 | Count
+  males                              | Sex
+  15                                 | Count
+  females                            | Sex
+  head-body length                   | Trait
+  55.7 + 0.5                         | TraitVal
+  51.0-59.0                          | TraitVal
+  3.3                                | TraitVal
+  52.9 + 0.3                         | TraitVal
+  50.5-54.5                          | TraitVal
+  2.4                                | TraitVal
   -----------------------------------------------------------------------
 
-> []{.mark}
+2.  **Annotate an entity**
 
-2.  **[Annotate an entity]{.mark}**
-
-> []{.mark}
-
-a.  [Select the text to be annotated with mouse-1. Only select the
-    > relevant text.]{.mark} Do not include unnecessary blank or
-    > whitespace, parenthesis, commas unless they are part of a tag.
-
-b.  Keep the tag selected and then annotate the tag from the combo box
-    > **value** given on the right side.
+a.  Select the text to be annotated with mouse-1. Only select the relevant text. Do not include unnecessary blank or whitespace, parenthesis, commas unless they are part of a tag.
+b.  Keep the tag selected and then annotate the tag from the combo box **value** given on the right side.
 
 Example:
 
-> Here in this example condylobasal length has been selected by the
-> user. Only the tag name is highlighted, leaving the comma or any other
-> space unselected. If the trait name is already highlighted then
-> confirm that tag is correctly placed. If not in both cases switch to
-> tag the specific genre.
+In the following example, condylobasal length has been selected by the user. Only the tag name is highlighted, leaving the comma or any other space unselected. If the trait name is already highlighted then confirm that tag is correctly placed. If not in both cases switch to tag the specific genre.
 
 Fig 1: Select Text
 
@@ -210,8 +195,7 @@ Fig 3: Tag the Entity
 
 ![Fig. 3](img/guidelines_3.jpg)
 
-**NOTE:**
-
+> **NOTE:**
 > If you think you've made a mistake, you can delete any named entity or
 > relation by selecting them and pressing **Delete.**
 
@@ -512,35 +496,35 @@ TABLE 2: RELATION TABLE BETWEEN ENTITIES. TRAITS
     <td>meas_Count</td>
     <td>TraitVal</td>
     <td>Count</td>
-    <td>verbatimTraitValue–individualCount</td>
+    <td>verbatimTraitValue→individualCount</td>
     <td> </td>
   </tr>
   <tr>
     <td>meas_Sex</td>
     <td>TraitVal</td>
     <td>Sex</td>
-    <td>verbatimTraitValue–Sex</td>
+    <td>verbatimTraitValue→Sex</td>
     <td> </td>
   </tr>
   <tr>
     <td>meas_LStage</td>
     <td>TraitVal</td>
     <td>LStage</td>
-    <td>verbatimTraitValue–LifeStage</td>
+    <td>verbatimTraitValue→LifeStage</td>
     <td> </td>
   </tr>
   <tr>
     <td>meas_Ref</td>
     <td>TraitVal</td>
     <td>Ref</td>
-    <td>verbatimTraitValue–References</td>
+    <td>verbatimTraitValue→References</td>
     <td> </td>
   </tr>
   <tr>
     <td>meas_Date</td>
     <td>TraitVal</td>
     <td>Date</td>
-    <td>verbatimTraitValue–measurementDeterminedDate</td>
+    <td>verbatimTraitValue→measurementDeterminedDate</td>
     <td> </td>
   </tr>
 </table> 
@@ -561,21 +545,21 @@ TABLE 3: RELATION TABLE BETWEEN ENTITIES. OCCURENCES.
     <td>OCCURS</td>
     <td>Species</td>
     <td>Loc / Coord</td>
-    <td>Species→Loc</td>
-    <td>Occurrence of a species at any location. If unpaired, i.e.: is described only with a set of coordinates, Coord is the end term, otherwise Loc takes precedence.</td>
+    <td>Species→Loc; Species→Coord; Loc→Loc</td>
+    <td>Occurrence of a species at any location. If unpaired, i.e.: is described only with a set of coordinates, Coord is the end term, otherwise Loc takes precedence. You may also use OCCURS to connect Loc terms that make sense in context, similarly to how meas_trait can be used.</td>
   </tr>
   <tr>
     <td>DATE</td>
     <td>Species</td>
     <td>LocDate</td>
-    <td>Species→LocDate (One-Many)</td>
+    <td>Species→LocDate</td>
     <td> </td>
   </tr>
   <tr>
     <td>GIVEN COORDS</td>
     <td>Loc</td>
     <td>Coord</td>
-    <td>Loc→Coord (One-One)</td>
+    <td>Loc→Coord</td>
     <td>If a location is described with both a Loc and Coord entities, this relation is established between them.</td>
   </tr>
 </table> 
