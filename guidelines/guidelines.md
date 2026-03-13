@@ -4,7 +4,7 @@
    * [1 - Installation](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#introduction)
    * [2 - Guidelines](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#guidelines-for-annotations)
    * [3 - Named entity examples and warnings](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#named-entity-examples-&-warnings)
-   * [4 - Relation examples & warnings](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#relation-examples-&-warnings)
+   * [4 - Relation examples & warnings](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#4.-relation-examples-&-warnings)
 <!--te-->
 
 # INTRODUCTION 
@@ -234,11 +234,15 @@ There are some rules and norms that have to be followed while annotating each en
 
 Stat measures indicate the numerical or statistical method of measurement. This may include ranges, means with SD (Standard Deviation), Coefficient of variation etc. Each statistical method should be independently tagged as a 'Stat' method, only if there is a resultant value present. 
 
+---
+
 ***Example 1.* Ranges:** A range is the stat measure which is related to the range of any trait value. In the example below: only the ranges of the trait values are provided. The range values can be found later as 54-63, 24-30 etc. So the statistical measure as **ranges** is tagged.
 
 > **Fig. 5**. Range as Stat.
 
 ![Fig. 5](img/guidelines_5.jpg)
+
+---
 
 ***Example 2.* Means and Range:** In this example two statistical measures are provided with relevant data i-e **means** and **range**. Therefore they are separately tagged. Later their corresponding trait values will also be separately tagged.
 
@@ -246,11 +250,15 @@ Stat measures indicate the numerical or statistical method of measurement. This 
 
 ![Fig. 6](img/guidelines_6.jpg)
 
+---
+
 ***Example 3.* Means+-SD, range and Coefficient of Variation:** In this example three statistical measures can be identified.) **means** is **coupled with SD** and is taken as one measurement. **Range** and **coefficient of variation** are other two stat measure tags.
 
 > **Fig. 7**. Means +-SD,range and Coefficient of Variation as Stat.
 
  ![Fig. 7](img/guidelines_7.jpg)
+
+ ---
 
 ***Example 4.* means+-SD, range:** In this example two stat measures means+-SD and range are separately tagged.
 
@@ -272,17 +280,23 @@ Example
 
 The trait names and their values are the most important named entities to annotate and as such if you have annotated a trait value you MUST annotate a species name and a trait name. Secondly, if a TraitName is not explicit in text - for example, if you have a measurement of a tail but what measurement it is (i.e: circumference, length, etc.) is not specified - then you must annotate it anyway to be interpreted in posteriority.
 
+---
+
 ***Example 1.*** The Trait Names tagged as **Trait** should have their respective TraitValues as TraitVal in the measurement. Consider this example, where the trait names include a whole expression including "length of", "breadth of", "height of", etc. These components are essential information comprising the traitname. The trait names in the example figure are boxed green. You can see that the whole trait with its measured terms are included in the tag.
 
 > **Fig. 10**. Trait as Tag.
 
 ![Fig. 10](img/guidelines_10.jpg)
 
+---
+
 ***Example 2.*** Next we are interested in Trait Values which could be measured by stated stat values as means, ranges etc. In this example the Trait Values are based on Stat values means and ranges already mentioned as Stat tags. The Trait Values are tagged accordingly. Additionally, consider that occasionally the trait name might be separated. In these situations annotate the rightmost term, to be interpreted in posteriority.
 
 > **Fig. 11**. TraitVal as Tag.
 
 ![Fig. 11](img/guidelines_11.jpg)
+
+---
 
 ***Example 3.*** In this example, the authors have chosen to organise their measurements by body segment, creating sentences starting with a segment like "prosoma" and then specifying the measurement. Both "long" and "wide" refer to a measurement of the prosoma and could be rewritten as "length of prosoma" and "width of prosoma", for example.
 
@@ -292,32 +306,21 @@ The trait names and their values are the most important named entities to annota
 
 ### 2.4.4 Ref (References)
 
-> When annotating, do not include parenthesis in the tagging except if
-> they're part of the reference's year. E.g: tagging an in-text citation
-> as "Author (2020)" is correct, tagging "(Author A 2020, Author B 2021,
-> Author C 2022)" as three separate instances of "(Author A 2020" ,
-> "Author B 2021" and "Author C 2022)" is incorrect as they should be
-> annotated as "Author A 2020", "Author B 2021" and "Author C 2022".
+When annotating, do not include parenthesis in the tagging except if they're part of the reference's year. E.g: tagging an in-text citation as "Author (2020)" is correct, tagging "(Author A 2020, Author B 2021, Author C 2022)" as three separate instances of "(Author A 2020" , "Author B 2021" and "Author C 2022)" is incorrect as they should be annotated as "Author A 2020", "Author B 2021" and "Author C 2022".
 
 ### 2.4.5 Loc (LocationofTaxon)
 
-> Sometimes a trait value or species is attributed to a location that is
-> in fact a continuous string of location organisational units, such as
-> "Portugal, Lisbon, Campo Grande", which are country, district and
-> parish, respectively. In these situations the entire string should be
-> annotated as a single location.
+Sometimes a trait value or species is attributed to a location that is in fact a continuous string of location organisational units, such as "Portugal, Lisbon, Campo Grande", which are country, district and parish, respectively. In these situations the entire string should be annotated as a single location.
 
-Fig13: Loc as Tag
+> **Fig. 13**. Loc as Tag.
 
 ![Fig. 13](img/guidelines_13.jpg)
 
 ### 2.4.6 Count (individualCount)
 
-> ***Example 1.*** Counts are the integer numbers of individuals
-> associated with a given value **only** and do not include the common
-> mathematical notation of "n =" denoting sample size.
+***Example 1.*** Counts are the integer numbers of individuals associated with a given value **only** and do not include the common mathematical notation of "n =" denoting sample size.
 
-Fig14: Count as Tag
+> **Fig. 14**. Count as Tag.
 
 ![Fig. 14](img/guidelines_14.jpg)
 
