@@ -1,6 +1,12 @@
-**ANNOTATION GUIDELINES WITH INCEPTION**
+# **ANNOTATION GUIDELINES WITH INCEPTION**
 
-# 1. INTRODUCTION 
+
+<!--ts-->
+   * [Installation](https://github.com/VascoBranco/recode/main/guidelines/guidelines#INTRODUCTION)
+   * [Guidelines](https://github.com/VascoBranco/recode/main/guidelines/guidelines#GUIDELINES-FOR-ANNOTATIONS) 
+<!--te-->
+
+# INTRODUCTION 
 
 First let's have a brief introduction about the entities that are involved in tagging any scientific journal or publication for the purpose of identifying useful trait information about a species. The annotations are based on measurements of trait information of a species and its secondary information. These bits of information in every measurement can be classified in following categories:
 -   **ETS-Term** The Ecological Traitdata.
@@ -133,7 +139,7 @@ project template which will be provided as a starter framework to annotate any d
 above mention tag the annotation will be done. Some of the tags may be pre-annotated and you can scrutinise them by deleting and updating
 with the correct one, where required.
 
-# 2. GUIDELINES FOR ANNOTATIONS
+# GUIDELINES FOR ANNOTATIONS
 ## 2.1 MATERIAL NEEDED
 -   **Computer.** Most OS' should be fine. Needs to be able to run your choice of web browser.
 -   **External mouse.** One bug in INCEpTION can only be bypassed if you have an external mouse with a mouse wheel.
