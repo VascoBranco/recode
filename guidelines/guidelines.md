@@ -4,7 +4,8 @@
    * [1 - Installation](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#introduction)
    * [2 - Guidelines](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#guidelines-for-annotations)
    * [3 - Named entity examples and warnings](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#named-entity-examples-&-warnings)
-   * [4 - Relation examples & warnings](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#4.-relation-examples-&-warnings)
+   * [4 - Relation examples & warnings](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#4-relation-examples-&-warnings)
+   * [5 - End notes](https://github.com/VascoBranco/recode/blob/main/guidelines/guidelines.md#5-end-notes)
 <!--te-->
 
 # INTRODUCTION 
