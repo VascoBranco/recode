@@ -2,8 +2,8 @@
 
 
 <!--ts-->
-   * [Installation](https://github.com/VascoBranco/recode/main/guidelines/guidelines#INTRODUCTION)
-   * [Guidelines](https://github.com/VascoBranco/recode/main/guidelines/guidelines#GUIDELINES-FOR-ANNOTATIONS) 
+   * [Installation](https://github.com/VascoBranco/recode/main/guidelines/guidelines#introduction)
+   * [Guidelines](https://github.com/VascoBranco/recode/main/guidelines/guidelines#guidelines-for-annotations)
 <!--te-->
 
 # INTRODUCTION 
