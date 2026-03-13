@@ -366,44 +366,23 @@ Fig14: Count as Tag
 
 # 3. RELATIONS ANNOTATION GUIDELINES
 
-> Relations establish how the named entities relate to each other. Most
-> are made particularly via TraitValue. A trait value is the core
-> measurement value that is linked to the rest of its dependent
-> attributes. A trait value describes one measurement with a complete
-> set of values linked through it. Relations are annotated when a
-> complete annotation process is done on the document or after a
-> particular set of annotations are completed that can constitute
-> relations. However, you should always consult Tables 2 and 3 at the
-> **end of this section**.
->
-> When you create a relation, select the annotated term. Keep it
-> selected. Drag the mouse button, an arc will emerge. Drop the arc to
-> the entity you want to link with, e.g Trait. **WARNING**: in the
-> current version of INCEpTION there is a graphical bug that may stop
-> you from creating relations between two terms very distant between
-> each other in the text. The "arrow" it creates will disappear but if
-> you scroll down you'll still be able to create the relation. However,
-> this only works with external mice, it will not work with laptop
-> trackpads!
->
-Fig 15 : Create Relation between TraitVal and Trait.
+Relations establish how the named entities relate to each other. Most are made particularly via TraitValue. A trait value is the core measurement value that is linked to the rest of its dependent attributes. A trait value describes one measurement with a complete set of values linked through it. Relations are  nnotated when a complete annotation process is done on the document or after a particular set of annotations are completed that can constitute relations. However, you should always consult Tables 2 and 3 at the **end of this section**.
+
+When you create a relation, select the annotated term. Keep it selected. Drag the mouse button, an arc will emerge. Drop the arc to the entity you want to link with, e.g Trait. **WARNING**: in the current version of INCEpTION there is a graphical bug that may stop you from creating relations between two terms  very distant between each other in the text. The "arrow" it creates will disappear but if you scroll down you'll still be able to create the relation. However, this only works with external mice, it will not work with laptop trackpads!
+
+> Fig 15 : Create Relation between TraitVal and Trait.
 
 ![Fig. 15](img/guidelines_15.jpg)
 
-> Once the link is established, on the right side the information will
-> be displayed. Confirm the relations are correctly done. **From** and
-> **To** tabs will show the values i-e TraitVal and Trait in this case.
-> From the meas_prop drop down select the appropriate relation
-> meas_trait in this case. As TraitVal is linked to Trait its meas_trait
-> is selected.
->
- Fig 16 : Relation Values between TraitVal and Trait.
+Once the link is established, on the right side the information will be displayed. Confirm the relations are correctly done. **From** and **To** tabs will show the values i-e TraitVal and Trait in this case. From the meas_prop drop down select the appropriate relation meas_trait in this case. As TraitVal is  linked to Trait its meas_trait is selected.
+
+> Fig 16 : Relation Values between TraitVal and Trait.
 
 ![Fig. 16](img/guidelines_16.jpg)
 
-> The relation **meas_trait** will be shown between the entities.
+The relation **meas_trait** will be shown between the entities.
 
-Fig 17 : Relation between TraitVal and Trait.
+> Fig 17 : Relation between TraitVal and Trait.
 
 ![Fig. 17](img/guidelines_17.jpg)
 
